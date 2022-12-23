@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Janken</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="janken.css" />
   </head>
   <body>
     <img
@@ -13,15 +13,39 @@
       src="images\ROCK_PAPER_SCISSORS_1440X900.jpg"
       alt="background image"
     />
-    <div class="counter">i am counting</div>
+    <div class="counter">
+      <table>
+        <tr>
+          <th>YOU</th>
+          <th>AI</th>
+        </tr>
+        <tr>
+          <th><p id="youP">0</p></th>
+          <th><p id="rivalP">0</p></th>
+        </tr>
+      </table>
+    </div>
     <div class="container">
       <h1>Let's play rock, paper, scissors!</h1>
-      <div class="rival">Rival's answer <img src="#" /></div>
+      <div class="rival">
+        Rival's answer <img src="images/startPose.png" id="rivalImage" />
+        <p id="text">Click something to start</p>
+      </div>
       <div class="buttons">
-        <div class="rock"><a>Rock</a></div>
-        <div class="paper"><a>Paper</a></div>
-        <div class="scissors"><a>Scissors</a></div>
+        <div class="rock" onclick="giveRock()">
+          <img src="images/rock.png" />
+          Rock
+        </div>
+        <div class="paper" onclick="givePaper()">
+          <img src="images/paper.png" />
+          Paper
+        </div>
+        <div class="scissors" onclick="giveScissors()">
+          <img src="images/scissors.png" />
+          Scissors
+        </div>
       </div>
     </div>
   </body>
+  <script src="janken.js"></script>
 </html>

@@ -8,7 +8,7 @@
 * {
   color: var(--maintextcolor);
 }
-
+/*backgound*/
 html {
   background: linear-gradient(
     to bottom,
@@ -20,9 +20,10 @@ html {
 
 .backgroundImage {
   opacity: 0;
-  width: 97.8vw;
-  height: 97.8vh;
+  width: 100%;
+  height: 100%;
 }
+/*backgound*/
 
 /*container*/
 
@@ -39,21 +40,8 @@ html {
   display: grid;
   align-items: center;
   grid-template-rows: 1fr 1fr 3fr;
-  row-gap: 70px;
+  row-gap: 30px;
 
-  transition: 0.7s;
-}
-
-.container:hover {
-  background-color: #bbe4e9;
-  width: 1000px;
-  height: 600px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-left: outset 0 var(--maintextcolor);
-  border-top: outset 0 var(--maintextcolor);
   transition: 0.7s;
 }
 
@@ -66,6 +54,15 @@ html {
   top: 50px;
 }
 
+table {
+  border: 2px black solid;
+  width: 150px;
+}
+
+th {
+  background-color: #bbe4e9;
+}
+
 /*counter*/
 /*content*/
 
@@ -76,6 +73,7 @@ h1 {
 
 .rival {
   display: block;
+  text-align: center;
   width: 200px;
   height: min-content;
   font-size: x-large;
@@ -83,35 +81,29 @@ h1 {
   margin: auto;
 }
 
+.rival img {
+  width: 100px;
+}
+
 .buttons {
   display: flex;
 }
 
-.rock {
-  width: 160px;
-  height: 90px;
-  background-color: grey;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-}
-
-.paper {
-  width: 160px;
-  height: 90px;
-  background-color: white;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-}
-
+.rock,
+.paper,
 .scissors {
-  width: 160px;
+  width: 200px;
   height: 90px;
-  background-color: red;
   margin: auto;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  text-align: center;
+  gap: 5px;
+  font-size: 25px;
+}
+
+.buttons img {
+  width: 100px;
+  margin: auto;
 }
 
 a {
